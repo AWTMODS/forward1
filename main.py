@@ -49,7 +49,7 @@ async def forward_old_messages():
     async for message in client.iter_messages(source_group, reverse=True):
         if isinstance(message.media, (MessageMediaPhoto, MessageMediaDocument)):
             media_seen += 1
-            if media_seen <= 21547:
+            if media_seen <= 23547:
                 continue  # Skip first 3296 media messages
 
             await forward_media(message)
