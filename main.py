@@ -4,12 +4,12 @@ from telethon import TelegramClient, events
 from telethon.tl.types import MessageMediaPhoto, MessageMediaDocument
 
 # Replace with your API credentials
-api_id = 20596103
-api_hash = "59e406718099f7eb5041371fed2cb3a1"
+api_id = 23393494
+api_hash = "33847fcd7c06cb9ac91c2e4baa4b5c75"
 
 # Group and channel IDs
-source_group = -1001725037486
-destination_channel = -1002468791555
+source_group = -1002535791256
+destination_channel = -1002368408222
 
 # Initialize the client
 client = TelegramClient('session_name', api_id, api_hash)
@@ -58,7 +58,7 @@ async def main():
     await client.start()
     print("🚀 Client started.")
     # Uncomment this if you want to see your chat IDs
-    #await list_chats()
+    await list_chats()
     await forward_old_messages()
     await client.run_until_disconnected()
 
